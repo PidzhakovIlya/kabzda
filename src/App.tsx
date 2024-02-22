@@ -1,6 +1,6 @@
 import React from 'react';
 import './App.css';
-import {Accardion} from "./components/Accordion/Accordion";
+import {Accordion} from "./components/Accordion/Accordion";
 import {Rating} from "./components/Rating/Rating";
 
 function App() {
@@ -11,8 +11,8 @@ function App() {
             Article 1
             <Rating value={3}/>
             <PageTitle title = 'This Application Title'/>
-            <Accardion title={'HTML'}/>
-            <Accardion title={'REACT'}/>
+            <Accordion title={'HTML'} collapsed = {true}/>
+            <Accordion title={'REACT'}  collapsed = {false}/>
             Article 2
             <Rating value={1}/>
             <Rating value={2}/>
@@ -23,7 +23,11 @@ function App() {
     );
 }
 
-function PageTitle(props: any) {
+type PagePropsType = {
+    title:string
+}
+
+function PageTitle(props: PagePropsType) {
     console.log("AppTitle rendering")
     return <>{props.title}</>
 }

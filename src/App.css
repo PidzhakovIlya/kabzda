@@ -1,0 +1,34 @@
+.toggle {
+    display: flex;
+    margin: 20px ;
+}
+
+.btn {
+    width: 60px;
+    height: 30px;
+    border: 1px solid black;
+    text-align: center;
+}
+
+.turn-on{
+    background-color: green;
+}
+
+.turn-off {
+    background-color: red;
+}
+
+.indicator {
+    width: 15px;
+    height: 15px;
+    border: 1px solid black;
+    border-radius: 50%;
+    align-self: center;
+    margin-left: 5px;
+}
+.indication-on{
+    background-color: green;
+}
+.indication-off{
+    background-color: red;
+}

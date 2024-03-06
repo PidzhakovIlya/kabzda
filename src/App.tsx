@@ -8,14 +8,14 @@ import {UncontrolledRating} from "./components/Rating/UncontrolledRating";
 
 function App() {
     console.log("App rendering")
-    const [toggle, setToggle] = useState<boolean>(true)
+    const [switchOn, setSwitchOn] = useState<boolean>(true)
     const [ratingValue, setRatingValue] = useState<RatingValueType>(1)
     const [collapsed, setCollapsed] = useState<boolean>(false)
 
     return (
         <div className="App">
-            <OnOff toggle={toggle} turn = {setToggle}/>
-            <Accordion title={"Menu"} collapsed={collapsed} onClick={()=>setCollapsed(!collapsed)}/>
+            <OnOff toggle={switchOn} turn = {setSwitchOn}/>
+            <Accordion title={"Menu"} collapsed={collapsed} onChange={()=>setCollapsed(!collapsed)}/>
             {/*<Accordion title={"Menu"} collapsed={collapsed} onClick={setCollapsed}/>*/}
             <UncontrolledAccordion title={'City'}/>
             {/*<PageTitle title = 'This App Title'/>*/}
